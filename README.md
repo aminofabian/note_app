@@ -1,14 +1,17 @@
 # Notes App
 
-A web-based note-taking application built with Node.js and Express that allows users to create accounts and manage their notes.
+A web-based note-taking and password management application built with Node.js and Express. This application allows users to securely store and manage both their notes and passwords in one convenient location.
 
 ## Features
 
 - User authentication (registration and login)
-- Secure password handling
+- Secure password handling and storage
+- Password management system
+- Note-taking functionality
 - Input validation and sanitization
 - EJS templating for dynamic content
 - Modern and responsive user interface
+- Secure data storage
 
 ## Technologies Used
 
@@ -70,6 +73,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - [your-email@example.com]
+Fabian Amino
 
-Project Link: [https://github.com/yourusername/notes]
+Project Link: [https://github.com/aminofabian/notes]
