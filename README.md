@@ -32,7 +32,7 @@ A web-based note-taking and password management application built with Node.js a
 
 1. Clone the repository:
    ```bash
-   git clone [your-repository-url]
+   git clone https://github.com/aminofabian/note_app.git
    ```
 
 2. Install dependencies:
@@ -42,7 +42,7 @@ A web-based note-taking and password management application built with Node.js a
 
 3. Start the server:
    ```bash
-   node server.js
+   npm run dev
    ```
 
 4. Open your browser and navigate to `http://localhost:3000`
