@@ -3,6 +3,24 @@ const { validateRegistration, validateLogin } = require("./validations/userValid
 
 const app = express();
 app.use(express.static("public"));
+
+const db = require("better-sqlite3")("ourApp.db");
+db.pragma("journal_mode=WAL");
+
+const createTables = db.transaction(() => {
+  db.prepare(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username STRING TEXT NOT NULL UNIQUE,
+      email STRING TEXT NOT NULL UNIQUE,
+      password_hash STRING TEXT NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+  `),run();
+});
+
+createTables();
+
 app.use(function (req, res, next) {
   res.locals.errors = [];
   next();

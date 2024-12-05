@@ -47,6 +47,36 @@ A web-based note-taking and password management application built with Node.js a
 
 4. Open your browser and navigate to `http://localhost:3000`
 
+## Environment Setup and Security
+
+### Environment Variables
+1. Copy `.env.example` to create your own `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Update the `.env` file with your actual values:
+   - Generate strong secrets for `JWT_SECRET` and `SESSION_SECRET`
+   - Set up your database credentials
+   - Configure other environment-specific settings
+
+### Security Best Practices
+1. Never commit the `.env` file to version control
+2. Regularly update dependencies to patch security vulnerabilities:
+   ```bash
+   npm audit
+   npm audit fix
+   ```
+3. Use strong passwords for database and API credentials
+4. Keep your Node.js version updated
+5. Enable CORS protection in production
+6. Use HTTPS in production
+7. Implement rate limiting for API endpoints
+
+### Password Storage
+- All passwords are hashed using bcrypt
+- Sensitive data is encrypted at rest
+- Session management uses secure cookies
+
 ## Project Structure
 
 ```
